@@ -20,7 +20,7 @@ power <- power[which(power$Date == '2/2/2007' | power$Date=='1/2/2007'),]
 power$POSIX <-as.POSIXlt.character(paste(power$Date,power$Time),format = "%d/%m/%Y %H:%M:%S")
 
 
-#plot3
+#plot3.
 png(filename="plot3.png",width=480, height=480)
 plot(x=power$POSIX,y=power$Sub_metering_1, type='l', col = 'black', ylab = 'Energy sub metering', xlab = '')
 lines(x=power$POSIX,y=power$Sub_metering_2, col='red')
